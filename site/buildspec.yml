@@ -1,21 +1,14 @@
-
 version: 0.2
 
 phases:
-  pre_build:
+  install:
     commands:
-      - echo "Starting static website deployment"
+      - echo Installing
 
   build:
     commands:
-      - echo "Validating website files"
-      - test -f site/index.html
-      - test -f site/style.css
-      - test -f site/script.js
+      - echo Building Application
 
-  post_build:
-    commands:
-      - echo "Deploying files to Amazon S3"
-      - aws s3 sync site/ s3://${S3_BUCKET}/ --delete
-      - echo "Deployment completed successfully"
-
+artifacts:
+  files:
+    - '**/*'
