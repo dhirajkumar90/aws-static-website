@@ -1,31 +1,146 @@
-
-body {
-    font-family: Arial, sans-serif;
+* {
     margin: 0;
-    background: #f3f6fb;
-    color: #222;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #263238;
+  }
+  
+  header {
+    background: #0b1f3a;
+    color: white;
+    padding: 18px 7%;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 22px;
+  }
+  
+  .navbar a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .navbar a:hover {
+    color: #38bdf8;
+  }
+  
+  .hero {
     text-align: center;
-}
-
-header {
-    background: #172554;
+    padding: 100px 20px;
     color: white;
-    padding: 50px 20px;
-}
-
-main {
-    margin: 40px auto;
-    padding: 30px;
-    max-width: 650px;
-    background: white;
-    border-radius: 12px;
-}
-
-button {
+    background: linear-gradient(135deg, #0b1f3a, #087ca7);
+  }
+  
+  .hero h1 {
+    font-size: clamp(32px, 5vw, 48px);
+    margin-bottom: 12px;
+  }
+  
+  .btn {
+    display: inline-block;
+    background: #087cf0;
+    color: white;
     padding: 12px 24px;
-    background: #2563eb;
-    color: white;
     border: none;
     border-radius: 6px;
+    margin-top: 20px;
+    text-decoration: none;
     cursor: pointer;
-}
+  }
+  
+  .btn:hover {
+    background: #0059b8;
+  }
+  
+  .section {
+    padding: 55px 7%;
+    text-align: center;
+  }
+  
+  .section h2 {
+    margin-bottom: 20px;
+  }
+  
+  .services {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 25px;
+  }
+  
+  .card {
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 14px #00000015;
+    background: #fff;
+  }
+  
+  .card h3 {
+    color: #087cf0;
+    margin-bottom: 10px;
+  }
+  
+  form {
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  input, textarea {
+    padding: 13px;
+    border: 1px solid #ccd5df;
+    border-radius: 6px;
+    font: inherit;
+  }
+  
+  textarea {
+    min-height: 120px;
+    resize: vertical;
+  }
+  
+  footer {
+    text-align: center;
+    background: #0b1f3a;
+    color: white;
+    padding: 20px;
+  }
+  
+  @media (max-width: 650px) {
+    .navbar {
+      flex-direction: column;
+    }
+  
+    .navbar ul {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 14px;
+    }
+  
+    .services {
+      grid-template-columns: 1fr;
+    }
+  
+    .hero {
+      padding: 70px 20px;
+    }
+  }

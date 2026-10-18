@@ -1,25 +1,72 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My AWS DevOps Website</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AWS Static Website</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Welcome to My DevOps Project</h1>
-        <p>Hosted on AWS using CodePipeline</p>
-    </header>
+  <header>
+    <nav class="navbar">
+      <h2>AWS DevOps</h2>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <main>
-        <h2>Automated CI/CD Deployment</h2>
-        <p>This static website is deployed automatically from GitHub to AWS.</p>
-        <button onclick="showMessage()">Test Website</button>
-        <p id="message"></p>
-    </main>
+  <section id="home" class="hero">
+    <h1>Welcome to Our Website</h1>
+    <p>Built with AWS S3, CodePipeline and CodeBuild</p>
+    <a href="#services" class="btn">Get Started</a>
+  </section>
 
-    <script src="script.js"></script>
+  <section id="about" class="section">
+    <h2>About Us</h2>
+    <p>
+      We build modern, scalable and secure web solutions using
+      AWS cloud services. This website demonstrates automated
+      deployment with CodePipeline and CodeBuild.
+    </p>
+  </section>
+
+  <section id="services" class="section">
+    <h2>Our Services</h2>
+    <div class="services">
+      <div class="card">
+        <h3>Cloud Solutions</h3>
+        <p>Scalable and reliable AWS architecture.</p>
+      </div>
+      <div class="card">
+        <h3>DevOps Automation</h3>
+        <p>CI/CD, infrastructure as code and monitoring.</p>
+      </div>
+      <div class="card">
+        <h3>Web Development</h3>
+        <p>Modern, fast and responsive websites.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <h2>Contact Us</h2>
+    <form id="contactForm">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="email" id="email" placeholder="Your Email" required>
+      <textarea id="message" placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+    <p id="response"></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 AWS DevOps Website. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
