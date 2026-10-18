@@ -8,13 +8,12 @@ phases:
   build:
     commands:
       - echo "Validating website files"
-      - test -f index.html
-      - test -f style.css
-      - test -f script.js
+      - test -f site/index.html
+      - test -f site/style.css
+      - test -f site/script.js
       - echo "Website validation successful"
 
 artifacts:
+  base-directory: site
   files:
-    - index.html
-    - style.css
-    - script.js
+    - '**/*'
